@@ -10,9 +10,14 @@ Created on Thu Dec 13 16:44:14 2018
 import math
 
 def quadratic(a,b,c):
-    result1=(-b+math.sqrt(pow(b,2)-4*a*c))/(2*a)
-    result2=(-b-math.sqrt(pow(b,2)-4*a*c))/(2*a)
-    return (result1,result2)
+    if a==0:
+        return (-c/b)
+    elif pow(b,2)-4*a*c >= 0:
+        result1=(-b+math.sqrt(pow(b,2)-4*a*c))/(2*a)
+        result2=(-b-math.sqrt(pow(b,2)-4*a*c))/(2*a)
+        return (result1,result2)
+    else:
+        return('no result')
 
 
 
