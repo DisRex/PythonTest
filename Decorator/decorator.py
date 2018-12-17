@@ -23,12 +23,12 @@ def metric(fn):
 
 
 # 测试
-@log('')
+@metric
 def fast(x, y):
     time.sleep(0.0012)
     return x + y;
 
-@log('slow:')
+@metric
 def slow(x, y, z):
     time.sleep(0.1234)
     return x * y * z;
